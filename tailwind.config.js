@@ -3,7 +3,12 @@ module.exports = {
   purge: ['./src/**/*.{vue,js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        senkron: ['Senkron', 'sans-serif'],
+        nunitos: ['Nunito Sans', 'sans-serif'],
+      }
+    },
   },
   variants: {
     extend: {},

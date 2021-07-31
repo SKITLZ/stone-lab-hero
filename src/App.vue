@@ -1,25 +1,22 @@
 <template>
-  <HelloWorld msg="Welcome" />
+  <HeroBlock v-bind="heroData" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
-import Job from '@/types/Job';
+import HeroBlock from './components/HeroBlock.vue';
+import { THeroBlock } from '@/types/THeroBlock';
+import { heroData as heroDataMock } from '@/mocks/heroData';
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    HeroBlock,
   },
   data() {
     return {
-      job: {
-        title: 'job1',
-        location: 'office1',
-      } as Job,
-      jobs: [] as Job[],
-    }
+      heroData: heroDataMock as THeroBlock,
+    };
   },
 });
 </script>
