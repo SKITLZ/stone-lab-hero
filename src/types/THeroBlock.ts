@@ -1,7 +1,7 @@
 import { TAppButton } from '@/types/TAppButton'
 
 interface THeroBlock {
-  imageURL: string,
+  imageURL?: string,
   leadText?: string,
   titleText?: string,
   descriptionText?: string,
