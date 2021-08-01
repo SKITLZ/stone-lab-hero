@@ -1,5 +1,9 @@
 <template>
   <!-- For better image scalability on mobile we need to extract a bigger original image from Figma -->
+  <!--
+    #141a26 is the 5px averge dark color extracted from the sample picture
+    in case of slow picture download speed or the lack of the picture for any reason
+  -->
   <!-- PixelPefect might show mismatch when proper fonts aren't installed -->
   <div
     class="font-senkron text-left text-white bg-[#141a26] bg-cover bg-center"
