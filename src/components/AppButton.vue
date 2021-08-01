@@ -13,37 +13,48 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-  /**
-   * @vue-prop {Boolean} isVisible - Is element visible to the user
-   * @vue-prop {String} bgColour - Background color of the element
-   * @vue-prop {String} text - Text inside the button
-   * @vue-prop {String} textColour - Text color
-   * @vue-prop {Function} onClick - The function to be executed when the button is clicked
-   */
+/**
+ * Reusable button component
+ */
 
 export default defineComponent({
   name: 'AppButton',
   props: {
+    /**
+     * Is element visible to the user
+     */
     isVisible: {
       type: Boolean,
       required: false,
       default: true,
     },
+    /**
+     * Background color of the element
+     */
     bgColour: {
       type: String,
       required: false,
       default: '#0EA5E9',
     },
+    /**
+     * Text inside the button
+     */
     text: {
       type: String,
       required: false,
       default: '',
     },
+    /**
+     * Text color
+     */
     textColour: {
       type: String,
       required: false,
       default: '#FFFFFF',
     },
+    /**
+     * The function to be executed when the button is clicked
+     */
     onClick: {
       type: Function,
       required: false,
@@ -52,7 +63,7 @@ export default defineComponent({
   },
   methods: {
     /**
-     * Emit's "onClick" event to the parent and executes onClick handler
+     * Emits "onClick" event to the parent and executes onClick handler
      */
     handleOnClick() {
       console.log(`onClick event from "${this.text}" button has been sent`)

@@ -32,14 +32,9 @@ import { defineComponent, PropType  } from 'vue';
 import { TAppButton } from '@/types/TAppButton';
 import AppButton from '@/components/AppButton.vue';
 
-  /**
-   * @vue-prop {String} imageURL - URL address to the background image of the whole element
-   * @vue-prop {String} leadText - Upper text
-   * @vue-prop {String} titleText - Middle text
-   * @vue-prop {String} descriptionText - Bottom text (but above buttons)
-   * @vue-prop {Object} buttonA - Button element properties
-   * @vue-prop {Object} buttonB - Button element properties
-   */
+/**
+ * Hero component for VueJS Storefront
+ */
 
 export default defineComponent({
   name: 'HeroBlock',
@@ -47,11 +42,29 @@ export default defineComponent({
     AppButton,
   },
   props: {
+    /**
+     * URL address to the background image of the whole element
+     */
     imageURL: String,
+    /**
+     * Upper text
+     */
     leadText: String,
+    /**
+     * Middle text
+     */
     titleText: String,
+    /**
+     * Bottom text, hidden on small resolutions (but above buttons)
+     */
     descriptionText: String,
+    /**
+     * Button element properties
+     */
     buttonA: Object as PropType<TAppButton>,
+    /**
+     * Button element properties
+     */
     buttonB: Object as PropType<TAppButton>,
   },
 });
